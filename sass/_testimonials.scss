@@ -1,0 +1,116 @@
+.testimonial {
+  background-image: linear-gradient(
+      to right,
+      rgba(55, 63, 71, 0.9),
+      rgba(38, 44, 49, 0.9)
+    ),
+    url(../img/testimonial-bg-img.jpg);
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  padding: 6rem 0;
+
+  .owl-carousel {
+    position: relative;
+  }
+  .owl-prev,
+  .owl-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.3s;
+    @media only screen and (max-width: $bp-medium) {
+      top: 65%;
+    }
+
+    ion-icon {
+      background-color: transparent;
+      color: #fff !important;
+      opacity: 0.4;
+      --ionicon-stroke-width: 16px;
+      &:hover {
+        background-color: transparent;
+      }
+      font-size: 6rem;
+
+      @media only screen and (max-width: $bp-medium) {
+        font-size: 4rem;
+      }
+    }
+  }
+  .owl-prev span,
+  .owl-next span {
+    font-size: 8rem;
+  }
+  .owl-prev {
+    left: 0;
+    font-size: 3rem;
+    @media only screen and (max-width: $bp-medium) {
+      left: -1.6rem;
+    }
+  }
+  .owl-next {
+    right: 0;
+    @media only screen and (max-width: $bp-medium) {
+      right: -1.6rem;
+    }
+  }
+
+  .clients__review {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    @media only screen and (max-width: $bp-medium) {
+      gap: 1.5rem;
+    }
+    .client__img {
+      height: 12rem;
+      width: 12rem;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    blockquote,
+    cite {
+      width: 70%;
+      font-size: 2.5rem;
+      font-weight: var(--fw-regular);
+      font-style: italic;
+      color: var(--color-white);
+
+      @media only screen and (max-width: $bp-medium) {
+        width: 80%;
+      }
+    }
+    cite {
+      font-style: normal;
+      font-size: 1.8rem;
+    }
+
+    .slider-icon {
+      .social-icon {
+        position: absolute;
+        fill: #707478;
+        font-size: 1rem;
+
+        &:first-child {
+          top: 50%;
+          left: -10rem;
+          transform: translateY(-50%);
+        }
+
+        &:last-child {
+          top: 50%;
+          right: -10rem;
+          transform: translateY(-50%);
+        }
+      }
+    }
+  }
+}

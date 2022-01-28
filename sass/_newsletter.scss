@@ -1,0 +1,46 @@
+.newsletter {
+  background-image: linear-gradient(
+      to right,
+      rgba(55, 63, 71, 0.9),
+      rgba(38, 44, 49, 0.9)
+    ),
+    url(../img/newsletter-img.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &__content {
+    display: flex;
+    justify-content: center;
+  }
+
+  &-form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+
+    input {
+      width: 50%;
+      padding: 1.2rem 2.5rem;
+      border: none;
+      border-radius: 15px;
+      background-color: var(--color-white);
+      color: var(--color-grey);
+      font-size: 1.6rem;
+
+      @media only screen and (max-width: $bp-medium) {
+        width: 100%;
+      }
+
+      &::placeholder {
+        font-size: 1.6rem;
+        color: var(--color-grey);
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}

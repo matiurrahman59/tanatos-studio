@@ -1,0 +1,61 @@
+:root {
+  --color-white: #fff;
+  --color-red: #f7600e;
+  --color-grey: #3b434c;
+
+  // FONT VARIABLES
+  --regular-font: 'Open Sans', sans-serif;
+  --form-font: 'Lato', sans-serif;
+  --fw-light: 300 !important;
+  --fw-regular: 400 !important;
+  --fw-semi-bold: 600 !important;
+  --fw-bold: 800 !important;
+}
+
+// RESPONSIVE BREAKPOINTS
+$bp-large: 62.5em; // 1000px
+$bp-medium: 48em; //768px
+$bp-small: 37.5em; // 600px
+$bp-smalest: 26.5625em; // 425
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  // This defines what 1rem is
+  font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 55% !important;
+  }
+}
+
+body {
+  font-family: var(--regular-font) !important;
+  font-size: 1.6rem !important;
+  font-weight: var(--fw-regular) !important;
+  line-height: 1.6 !important;
+  overflow-x: hidden !important;
+}
+
+ul {
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 !important;
+}
+a {
+  text-decoration: none !important;
+}

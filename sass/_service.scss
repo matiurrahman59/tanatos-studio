@@ -1,0 +1,51 @@
+.service {
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+
+    @media only screen and (max-width: $bp-small) {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(29rem, 1fr));
+      gap: 8rem;
+      width: 50%;
+      margin: auto;
+    }
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+      gap: 7.5rem;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      .paragraph {
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  &-logo {
+    position: relative;
+  }
+
+  &-logo::before {
+    position: absolute;
+    content: '';
+    width: 15rem;
+    height: 15rem;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #c8cacd;
+    border-radius: 50%;
+  }
+
+  &-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
